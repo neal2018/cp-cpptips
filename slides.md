@@ -375,6 +375,7 @@ might subjective
 
 - Prefer local variables to global variables
 - Be careful with the lifetime of local variables
+- Prefer lambda to normal function, especially when it's recursive. Capture the local variables!
 - Prefer `std::vector` and `std::array` to C-style array (`int a[100000]`)
 - Prefer `std::string` to C-style string (`char s[100000]`)
 - Prefer indexing starting from 0, not 1
