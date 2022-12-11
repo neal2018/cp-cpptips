@@ -367,3 +367,20 @@ for (int step = 0; q.size(); swap(q, nq), nq.clear(), step++) {
   }
 }
 ```
+
+---
+
+# Tips:
+might subjective
+
+- Prefer local variables to global variables
+- Be careful with the lifetime of local variables
+- Prefer `std::vector` and `std::array` to C-style array (`int a[100000]`)
+- Prefer `std::string` to C-style string (`char s[100000]`)
+- Prefer indexing starting from 0, not 1
+- Prefer `std::array` to `std::vector` when the size is small and fixed, like a 2-by-2 matrix
+- Prefer `std::array` to `std::pair`/`std::tuple` when the types are the same
+- gcc: compile with `-D_GLIBCXX_DEBUG -D_GLIBCXX_ASSERTIONS`
+  - it helps to throw exceptions when meeting some UB, like accessing out-of-bound elements
+- In Linux, use sanitizer: compile with `-fsanitize=address -fsanitize=undefined` etc
+- Precompile your header files (like `bits/stdc++.h`) to speed up compilation
