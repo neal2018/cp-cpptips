@@ -154,7 +154,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 ```cpp
 string s;
 cin >> s;
-string t(s.rbegin(), s.rend());
+string rev_s(s.rbegin(), s.rend());
 ```
 
 Example: [https://codeforces.com/contest/1758/problem/A](https://codeforces.com/contest/1758/problem/A)
