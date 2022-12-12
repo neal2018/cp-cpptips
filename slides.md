@@ -386,9 +386,11 @@ int x = rng() % 100; // [0, 99]
 
 ---
 
-# GCC Built-in Bit Operations
+# GCC Built-in Bit Functions
 
 <br/>
+
+They are handy and fast!
 
 ```cpp
 __builtin_popcount(x); // count number of 1s
