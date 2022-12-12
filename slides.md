@@ -201,7 +201,7 @@ layout: two-cols
 # lambda
 
 ```cpp
-// avoid naming escape
+// keep new name unvisited to outside
 int limit = [&]{
   int l = 0, r = n;
   while (l < r) {
