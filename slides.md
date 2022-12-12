@@ -334,7 +334,7 @@ Example: Kickstart 2022 Round E, Problem D
 
 ---
 
-# Print `__int128`
+# print `__int128`
 <br/>
 
 Maybe useless though...
@@ -372,7 +372,7 @@ for (int step = 0; q.size(); swap(q, nq), nq.clear(), step++) {
 
 ---
 
-# Generate Random Integers
+# generate random integers
 
 <br/>
 
@@ -386,7 +386,7 @@ int x = rng() % 100; // [0, 99]
 
 ---
 
-# GCC Built-in Bit Functions
+# gcc built-in bit functions
 
 <br/>
 
@@ -462,7 +462,7 @@ for (auto&& x : a) x = true;
 
 ---
 
-# Scope
+# scope
 <br/>
 
 If you want to use a same name twice, or just want to make the code more readable, you can make a scope explicitly.
@@ -477,6 +477,19 @@ If you want to use a same name twice, or just want to make the code more readabl
   int direction = -1;
   // do something
 }
+```
+
+---
+
+# `std::find`
+<br/>
+
+```cpp
+vector<int> a = {1, 1, 4, 5, 1, 4};
+// find the first 4
+auto it_first = find(a.begin(), a.end(), 4);
+// find the last 4
+auto it_last = find(a.rbegin(), a.rend(), 4).base();
 ```
 
 ---
