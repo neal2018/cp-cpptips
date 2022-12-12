@@ -462,6 +462,25 @@ for (auto&& x : a) x = true;
 
 ---
 
+# Scope
+<br/>
+
+If you want to use a same name twice, or just want to make the code more readable, you can make a scope explicitly.
+
+```cpp
+{
+  int direction = 1;
+  // do something
+}
+
+{
+  int direction = -1;
+  // do something
+}
+```
+
+---
+
 # Tips:
 might subjective
 
