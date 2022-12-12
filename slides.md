@@ -370,12 +370,100 @@ for (int step = 0; q.size(); swap(q, nq), nq.clear(), step++) {
 
 ---
 
+# Generate Random Integers
+
+<br/>
+
+Do not use `rand()`...
+
+```cpp
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+int x = rng() % 100; // [0, 99]
+```
+
+---
+
+# GCC Built-in Bit Operations
+
+<br/>
+
+```cpp
+__builtin_popcount(x); // count number of 1s
+__builtin_clz(x); // count number of leading 0s
+__builtin_ctz(x); // count number of trailing 0s
+__builtin_parity(x); // count number of 1s mod 2
+
+// unsigned long long version
+__builtin_popcountll(x);
+```
+
+---
+
+# `erase` vs `extract` in `std::multiset`/`std::multimap`
+
+<br/>
+
+If you want to erase all elements with the same key, use `erase`.
+
+```cpp
+multiset<int> s = {1, 2, 3, 3, 3};
+s.erase(3); // {1, 2}
+```
+
+If you want to erase only one element, use `extract`.
+
+```cpp
+multiset<int> s = {1, 2, 3, 3, 3};
+s.extract(3); // {1, 2, 3, 3}
+```
+
+---
+# `std::unique`
+<br/>
+
+Remove duplicates by sorting and `std::unique`.
+
+```cpp
+vector<int> a = {1, 1, 4, 5, 1, 4};
+sort(a.begin(), a.end());
+a.erase(unique(a.begin(), a.end()), a.end());
+```
+---
+
+# `std::stable_sort`
+
+<br/>
+
+Sometimes faster than `std::sort`, but occupies more memory.
+
+```cpp
+stable_sort(v.begin(), v.end());
+```
+
+---
+
+# `std::vector<bool>`
+<br/>
+
+Best practice: Do not use it.
+
+```cpp
+vector<bool> a = {true, false, true};
+// ???
+for (auto x : a) x = true;
+for (auto& x : a) x = true;
+for (auto&& x : a) x = true;
+```
+
+---
+
 # Tips:
 might subjective
 
 - Prefer local variables to global variables
 - Be careful with the lifetime of local variables
-- Prefer lambda to normal function, especially when it's recursive. Capture the local variables!
+- Prefer lambda to normal function. Capture the local variables!
 - Prefer `std::vector` and `std::array` to C-style array (`int a[100000]`)
 - Prefer `std::string` to C-style string (`char s[100000]`)
 - Prefer indexing starting from 0, not 1
