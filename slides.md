@@ -334,7 +334,7 @@ Example: Kickstart 2022 Round E, Problem D
 
 ---
 
-# print `__int128`
+# Print `__int128`
 <br/>
 
 Maybe useless though...
