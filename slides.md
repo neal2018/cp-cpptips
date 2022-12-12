@@ -337,6 +337,8 @@ Example: Kickstart 2022 Round E, Problem D
 # print `__int128`
 <br/>
 
+Maybe useless though...
+
 ```cpp
 using ll = long long;
 void print(__int128 x) {
