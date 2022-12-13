@@ -35,6 +35,7 @@ press space to continue
 </div>
 
 ---
+
 # about me
 
 - Columbia ICPC Team, advanced to World Finals
