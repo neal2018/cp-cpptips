@@ -35,16 +35,6 @@ press space to continue
 </div>
 
 ---
-
-# about me
-
-- Columbia ICPC Team, advanced to World Finals
-- https://codeforces.com/profile/Nea1
-- jl5722@columbia.edu
-- Creator of https://cp-ranking.netlify.app/
-
-
----
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
