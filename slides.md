@@ -132,13 +132,19 @@ auto [mini, maxi] = minmax(u, v);
 It is pretty useful if you want to store an unordered pair in a set
 ```cpp
 set<pair<int, int>> s;
-s.insert(minmax{u, v});
+s.insert(minmax(u, v));
 ```
 <br/>
 
 Be careful: this code does not work as one might expect
 ```cpp
-tie(u, v) = minmax(u, v);
+tie(u, v) = minmax(u, v); // return [min, min]
+auto [x, y] = minmax(u, v); // ub
+```
+One might want to use
+```cpp
+tie(u, v) = minmax({u, v});
+auto [x, y] = minmax({u, v});
 ```
 
 Example: [https://codeforces.com/contest/1700/problem/E](https://codeforces.com/contest/1700/problem/E)
