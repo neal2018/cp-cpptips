@@ -139,7 +139,7 @@ s.insert(minmax({u, v}));
 Be careful: this code does not work as one might expect
 ```cpp
 tie(u, v) = minmax(u, v); // return [min, min]
-auto [x, y] = minmax(u, v); // ub
+auto [x, y] = minmax(u, v); // might be ub
 ```
 One might want to use
 ```cpp
@@ -161,6 +161,8 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 string s;
 cin >> s;
 string rev_s(s.rbegin(), s.rend());
+// you can also sort it in decreasing order by...
+sort(s.rbegin(), s.rend());
 ```
 
 Example: [https://codeforces.com/contest/1758/problem/A](https://codeforces.com/contest/1758/problem/A)
